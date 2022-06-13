@@ -73,7 +73,7 @@ Route::get('/maklumat', function(){
 });
 
 
-Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
@@ -82,4 +82,8 @@ Route::get('/dashboard', function(){
 })->middleware('auth');
 
 
+Route::get('/institusi', [InstitusiController::class, 'institusi'])->middleware('auth');
 Route::get('/institusi/visimisi', [InstitusiController::class, 'visimisi'])->middleware('auth');
+Route::get('/institusi/editvisimisi', [InstitusiController::class, 'editVisimisi'])->middleware('auth');
+Route::post('/institusi/updatevisimisi', [InstitusiController::class, 'updateVisimisi'])->middleware('auth');
+Route::post('/institusi/visimisi/halamanVisimisi', [InstitusiController::class, 'halamanVisimisi']);

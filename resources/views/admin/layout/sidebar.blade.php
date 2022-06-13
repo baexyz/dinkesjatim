@@ -32,6 +32,12 @@
                     <h4 class="text-section">Halaman Website</h4>
                 </li>
                 <li class="nav-item">
+                    <a href="/institusi">
+                        <i class="fas fa-pen-square"></i>
+                        <p>Institusi</p>
+                    </a>
+                </li>
+                {{-- <li class="nav-item">
                     <a data-toggle="collapse" href="#forms">
                         <i class="fas fa-pen-square"></i>
                         <p>Institusi</p>
@@ -71,7 +77,7 @@
                             </li>
                         </ul>
                     </div>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a data-toggle="collapse" href="#forms2">
                         <i class="fas fa-clipboard-list"></i>

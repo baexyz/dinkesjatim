@@ -14,44 +14,52 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6 col-lg-12">
-                                <div class="form-group">
-                                    <div class="mb-3">
-                                        <label for="formFile" class="form-label">Sertakan Gambar untuk Headline
-                                            Berita</label>
-                                        <input class="form-control" type="file" id="formFile">
+                                <form action="/institusi/visimisi/halamanVisimisi" method="POST"
+                                    enctype="multipart/form-data">
+                                    @csrf
+                                    <div class="form-group">
+                                        <input id="profil_id" name="profil_id" type="text" value="{{ $profil[0]->id }}"
+                                            hidden>
+                                        <label for="judul">Judul</label>
+                                        <input class="form-control" type="text" placeholder="Judul" name="judul"
+                                            id="judul">
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email2">Judul</label>
-                                    <input class="form-control" type="text" placeholder="Judul"
-                                        aria-label="default input example">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email2">Slug</label>
-                                    <input class="form-control" type="text" placeholder="Judul"
-                                        aria-label="default input example">
-                                </div>
 
-                                <div class="form-group">
-                                    <label for="email2">Isi</label>
+                                    <div class="form-group">
+                                        <div class="mb-3">
+                                            <label for="image" class="form-label">Sertakan Gambar untuk Headline
+                                                Berita</label>
+                                            <input type="hidden" name="oldImage" value="{{ $profil[0]->image }}">
+                                            @if ($profil[0]->image)
+                                                <img src="{{ asset('storage/' . $profil[0]->image) }}"
+                                                    class="img-preview img-fluid mb-3 col-sm-5 d-block">
+                                            @else
+                                                <img class="img-preview img-fluid mb-3 col-sm-5">
+                                            @endif
+                                            <input class="form-control" type="file" id="image" name="image"
+                                                onchange="previewImage()">
+                                        </div>
+                                    </div>
 
-                                    <form>
-                                        <input id="x" type="hidden" name="content">
-                                        <trix-editor input="x"></trix-editor>
-                                    </form>
-                                </div>
-                                <div class="form-group">
-                                    <label for="smallSelect">Bidang</label>
-                                    <select class="form-control form-control-sm" name="bidang_id">
-                                        @foreach ($bidang as $b)
-                                            <option value="{{ $b->id }}">{{ $b->nama_bidang }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <button class="btn btn-primary">Simpan</button>
-                                    <button class="btn btn-danger">Batal</button>
-                                </div>
+                                    <div class="form-group">
+                                        <label for="body">Isi</label>
+                                        <input id="body" type="hidden" name="body">
+                                        <trix-editor input="body"></trix-editor>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="smallSelect">Bidang</label>
+                                        <select class="form-control form-control-sm" name="bidang_id">
+                                            @foreach ($bidang as $b)
+                                                <option value="{{ $b->id }}">{{ $b->nama_bidang }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-primary" type="submit">Simpan</button>
+                                        <button class="btn btn-danger">Batal</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -59,4 +67,21 @@
             </div>
         </div>
     </div>
+
+
+    <script>
+        function previewImage() {
+            const image = document.querySelector('#image');
+            const imgPreview = document.querySelector('.img-preview');
+
+            imgPreview.style.display = 'block';
+
+            const oFReader = new FileReader();
+            oFReader.readAsDataURL(image.files[0]);
+
+            oFReader.onload = function(oFREvent) {
+                imgPreview.src = oFREvent.target.result;
+            }
+        }
+    </script>
 @endsection

@@ -13,15 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('institusi', function (Blueprint $table) {
+        Schema::create('profil', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('bidang_id');
-            $table->foreignId('user_id');
-            $table->foreignId('profil_id');
-            $table->string('judul');
-            $table->string('image');
-            $table->text('body');
-            $table->timestamp('publish_at')->nullable();
+            $table->string('halaman_profil');
             $table->timestamps();
         });
     }
@@ -33,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('institusi');
+        Schema::dropIfExists('profil');
     }
 };

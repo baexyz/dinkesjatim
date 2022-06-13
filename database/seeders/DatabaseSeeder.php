@@ -8,6 +8,7 @@ use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\Bidang;
 use App\Models\Institusi;
+use App\Models\Profil;
 
 class DatabaseSeeder extends Seeder
 {
@@ -32,6 +33,10 @@ class DatabaseSeeder extends Seeder
             'nama' => 'Bagas Roberto',
             'email' => 'roberto.bagas7@gmail.com',
             'password' => bcrypt('12345')
+        ]);
+
+        Profil::create([
+            'halaman_profil' => 'Visi Misi'
         ]);
 
         User::factory(3)->create();
