@@ -102,7 +102,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="/ppid/informasi-publik">
+                                <a href="/ppid/daftar-informasi-publik">
                                     <span class="sub-item">Daftar Informasi Publik</span>
                                 </a>
                             </li>
@@ -172,7 +172,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="/public-corner">
+                    <a href="/admin/public-corner">
                         <i class="fas fa-inbox"></i>
                         <p>Public Corner</p>
                     </a>

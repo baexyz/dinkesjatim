@@ -916,10 +916,7 @@ progress {
     --bs-gutter-y: 1.5rem
 }
 
-.g-5,
-.gx-5 {
-    /* --bs-gutter-x: 0rem */
-}
+
 
 .g-5,
 .gy-5 {
@@ -8084,13 +8081,10 @@ fieldset:disabled .btn {
 .py-5 {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important
-<<<<<<< HEAD
-=======
 }
 .py-55 {
     padding-top: 3rem !important;
     padding-bottom: 1rem !important
->>>>>>> 0d11d26767ae620e9b10f6c0bbca277c9a1c2a79
 }
 
 

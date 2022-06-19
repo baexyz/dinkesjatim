@@ -15,6 +15,12 @@ class Institusi extends Model
     protected $table = 'institusi';
     protected $guarded = ['id'];
 
+    protected $dates = [
+        'created_at',
+        'updated_at',
+        // your other new column
+    ];
+
     public function bidang(){
         return $this->belongsTo(Bidang::class);
     }

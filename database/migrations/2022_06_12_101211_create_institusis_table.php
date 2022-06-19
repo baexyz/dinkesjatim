@@ -19,8 +19,8 @@ return new class extends Migration
             $table->foreignId('user_id');
             $table->foreignId('profil_id');
             $table->string('judul');
-            $table->string('image');
-            $table->text('body');
+            $table->string('image')->nullable();
+            $table->text('body')->nullable();
             $table->timestamp('publish_at')->nullable();
             $table->timestamps();
         });

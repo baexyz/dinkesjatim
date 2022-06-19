@@ -6,42 +6,42 @@
                 <h3 class="mb-0">Kabar Terkini</h3>
             </div>
             <div class="d-flex rounded overflow-hidden mb-3">
-                <img class="img-fluid" src="img/blog-1.jpg"
+                <img class="img-fluid" src="/img/blog-1.jpg"
                     style="width: 80px; height: 80px; object-fit: cover;" alt="">
                 <a href="" class="h7 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum
                     dolor sit amet adipis elit
                 </a>
             </div>
             <div class="d-flex rounded overflow-hidden mb-3">
-                <img class="img-fluid" src="img/blog-2.jpg"
+                <img class="img-fluid" src="/img/blog-2.jpg"
                     style="width: 80px; height: 80px; object-fit: cover;" alt="">
                 <a href="" class="h7 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum
                     dolor sit amet adipis elit
                 </a>
             </div>
             <div class="d-flex rounded overflow-hidden mb-3">
-                <img class="img-fluid" src="img/blog-3.jpg"
+                <img class="img-fluid" src="/img/blog-3.jpg"
                     style="width: 80px; height: 80px; object-fit: cover;" alt="">
                 <a href="" class="h7 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum
                     dolor sit amet adipis elit
                 </a>
             </div>
             <div class="d-flex rounded overflow-hidden mb-3">
-                <img class="img-fluid" src="img/blog-1.jpg"
+                <img class="img-fluid" src="/img/blog-1.jpg"
                     style="width: 80px; height: 80px; object-fit: cover;" alt="">
                 <a href="" class="h7 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum
                     dolor sit amet adipis elit
                 </a>
             </div>
             <div class="d-flex rounded overflow-hidden mb-3">
-                <img class="img-fluid" src="img/blog-2.jpg"
+                <img class="img-fluid" src="/img/blog-2.jpg"
                     style="width: 80px; height: 80px; object-fit: cover;" alt="">
                 <a href="" class="h7 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum
                     dolor sit amet adipis elit
                 </a>
             </div>
             <div class="d-flex rounded overflow-hidden mb-3">
-                <img class="img-fluid" src="img/blog-3.jpg"
+                <img class="img-fluid" src="/img/blog-3.jpg"
                     style="width: 80px; height: 80px; object-fit: cover;" alt="">
                 <a href="" class="h7 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum
                     dolor sit amet adipis elit

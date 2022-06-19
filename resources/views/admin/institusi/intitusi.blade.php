@@ -32,41 +32,41 @@
                                     <td>2</td>
                                     <td>Tujuan</td>
                                     <td>
-                                        <a href="" class="btn btn-primary"> <i class="fa fa-edit"></i> Edit</a>
+                                        <a href="/institusi/edittujuan" class="btn btn-primary"> <i class="fa fa-edit"></i> Edit</a>
                                     </td>
                                 </tr>
                                     <td>3</td>
                                     <td>Motto</td>
                                     <td>
-                                        <a href="" class="btn btn-primary"> <i class="fa fa-edit"></i> Edit</a>
+                                        <a href="/institusi/editmotto" class="btn btn-primary"> <i class="fa fa-edit"></i> Edit</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
                                     <td>Kebijakan</td>
                                     <td>
-                                        <a href="" class="btn btn-primary"> <i class="fa fa-edit"></i> Edit</a>
+                                        <a href="/institusi/editkebijakan" class="btn btn-primary"> <i class="fa fa-edit"></i> Edit</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>5</td>
                                     <td>Struktur Organisasi</td>
                                     <td>
-                                        <a href="" class="btn btn-primary"> <i class="fa fa-edit"></i> Edit</a>
+                                        <a href="/institusi/editstrukturorganisasi" class="btn btn-primary"> <i class="fa fa-edit"></i> Edit</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>6</td>
                                     <td>Profil Pejabat</td>
                                     <td>
-                                        <a href="" class="btn btn-primary"> <i class="fa fa-edit"></i> Edit</a>
+                                        <a href="/profilpejabat" class="btn btn-primary"> <i class="fa fa-edit"></i> Edit</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>7</td>
                                     <td>Maklumat Pelayanan</td>
                                     <td>
-                                        <a href="" class="btn btn-primary"> <i class="fa fa-edit"></i> Edit</a>
+                                        <a href="/institusi/editmaklumat" class="btn btn-primary"> <i class="fa fa-edit"></i> Edit</a>
                                     </td>
                                 </tr>
 

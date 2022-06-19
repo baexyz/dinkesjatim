@@ -41,7 +41,7 @@
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
             <a href="index.html" class="navbar-brand p-0">
-                <img class="header-logo" src="img/header.png" alt="" srcset="">
+                <img class="header-logo" src="/img/header.png" alt="" srcset="">
                 {{-- <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>Startup</h1> --}}
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">

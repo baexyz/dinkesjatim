@@ -2,13 +2,14 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
-
 use App\Models\User;
 use App\Models\Bidang;
-use App\Models\Institusi;
+
 use App\Models\Profil;
+use App\Models\Pejabat;
+use App\Models\Institusi;
+use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class DatabaseSeeder extends Seeder
 {
@@ -27,16 +28,49 @@ class DatabaseSeeder extends Seeder
             'nama_bidang' => 'Bidang Kesehatan Masyarakat',
             'slug' => 'bidang-kesehatan-masyarakat'
         ]);
+        Pejabat::create([
+            'posisi_jabatan' => 'Kepala Dinas Kesehatan',
+        ]);
+        Pejabat::create([
+            'posisi_jabatan' => 'Sekretariat',
+        ]);
+        Pejabat::create([
+            'posisi_jabatan' => 'Bidang Kesehatan Masyarakat',
+        ]);
+        Pejabat::create([
+            'posisi_jabatan' => 'Bidang Pencegahan dan Pengendalian Penyakit',
+        ]);
+        Pejabat::create([
+            'posisi_jabatan' => 'Bidang Pelayanan Kesehatan',
+        ]);
 
         User::create([
-            'username' => 'Bagas',
+            'username' => 'bagas',
             'nama' => 'Bagas Roberto',
             'email' => 'roberto.bagas7@gmail.com',
-            'password' => bcrypt('12345')
+            'password' => bcrypt('111111')
         ]);
 
         Profil::create([
             'halaman_profil' => 'Visi Misi'
+        ]);
+        Profil::create([
+            'halaman_profil' => 'Tujuan'
+        ]);
+        Profil::create([
+            'halaman_profil' => 'Motto'
+        ]);
+        Profil::create([
+            'halaman_profil' => 'Kebijakan'
+        ]);
+        Profil::create([
+            'halaman_profil' => 'Struktur Organisasi'
+        ]);
+        Profil::create([
+            'halaman_profil' => 'Profil Pejabat'
+        ]);
+        Profil::create([
+            'halaman_profil' => 'Maklumat'
         ]);
 
         User::factory(3)->create();

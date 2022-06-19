@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
+use App\Models\Ppid;
 use App\Models\Institusi;
+use App\Models\ProfilPejabat;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -15,5 +17,12 @@ class Bidang extends Model
 
     public function institusi(){
         return $this->hasMany(Institusi::class);
+    }
+    public function profilPejabat(){
+        return $this->hasMany(ProfilPejabat::class);
+    }
+
+    public function ppid(){
+        return $this->hasMany(Ppid::class);
     }
 }
