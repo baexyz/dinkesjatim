@@ -178,7 +178,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/bank-data-spm">
+                    <a href="/admin/bank-data-spm">
                         <i class="fas fa-folder"></i>
                         <p>Bank Data (SPM)</p>
                     </a>

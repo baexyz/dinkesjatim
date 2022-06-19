@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DataController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\PpidController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BerandaController;
@@ -216,3 +218,47 @@ Route::post('/konfig/popup/updatepopup', [KonfigurasiController::class, 'updateP
 
 Route::get('/ubah-password', [KonfigurasiController::class, 'gantipassword'])->middleware('auth');
 Route::post('/ubah-password', [KonfigurasiController::class, 'ubahpassword'])->middleware('auth');
+
+Route::get('/admin/bank-data-spm', [DataController::class, 'spm'])->middleware('auth');
+Route::get('/admin/tambahdataspm', [DataController::class, 'tambahSpm'])->middleware('auth');
+Route::post('/admin/createspm', [DataController::class, 'createSpm'])->middleware('auth');
+Route::post('/admin/spm/{spm:id}/hapus', [DataController::class, 'hapusSpm'])->middleware('auth');
+
+Route::get('/datainformasi/dokumen-publikasi', [DataController::class, 'dp'])->middleware('auth');
+Route::get('/datainformasi/tambahdatadp', [DataController::class, 'tambahDp'])->middleware('auth');
+Route::post('/datainformasi/createdp', [DataController::class, 'createDp'])->middleware('auth');
+Route::post('/datainformasi/{data:id}/hapus', [DataController::class, 'hapusDp'])->middleware('auth');
+
+Route::get('/datainformasi/peraturan-aturan', [DataController::class, 'pa'])->middleware('auth');
+Route::get('/datainformasi/tambahdatapa', [DataController::class, 'tambahPa'])->middleware('auth');
+Route::post('/datainformasi/createpa', [DataController::class, 'createPa'])->middleware('auth');
+Route::post('/datainformasi/pa/{data:id}/hapus', [DataController::class, 'hapusPa'])->middleware('auth');
+
+Route::get('/datainformasi/laporan-kinerja', [DataController::class, 'lk'])->middleware('auth');
+Route::get('/datainformasi/tambahdatalk', [DataController::class, 'tambahLk'])->middleware('auth');
+Route::post('/datainformasi/createlk', [DataController::class, 'createLk'])->middleware('auth');
+Route::post('/datainformasi/lk/{data:id}/hapus', [DataController::class, 'hapusLk'])->middleware('auth');
+
+Route::get('/datainformasi/saka-bakti-husada', [DataController::class, 'sbh'])->middleware('auth');
+Route::get('/datainformasi/tambahdatasbh', [DataController::class, 'tambahSbh'])->middleware('auth');
+Route::post('/datainformasi/createsbh', [DataController::class, 'createSbh'])->middleware('auth');
+Route::post('/datainformasi/sbh/{data:id}/hapus', [DataController::class, 'hapusSbh'])->middleware('auth');
+
+Route::get('/data/agenda', [DataController::class, 'agenda'])->middleware('auth');
+Route::get('/data/tambahagenda', [DataController::class, 'tambahAgenda'])->middleware('auth');
+Route::post('/data/createagenda', [DataController::class, 'createAgenda'])->middleware('auth');
+Route::post('/data/agenda/{agenda:id}/hapus', [DataController::class, 'hapusAgenda'])->middleware('auth');
+
+Route::get('/data/artikel', [PostController::class, 'artikel'])->middleware('auth');
+Route::get('/data/tambahartikel', [PostController::class, 'tambahArtikel'])->middleware('auth');
+Route::post('/data/createartikel', [PostController::class, 'createArtikel'])->middleware('auth');
+Route::get('/data/artikel/{post:id}/edit', [PostController::class, 'editArtikel'])->middleware('auth');
+Route::post('/data/artikel/{post:id}/update', [PostController::class, 'updateArtikel'])->middleware('auth');
+Route::post('/data/artikel/{post:id}/hapus', [PostController::class, 'hapusArtikel'])->middleware('auth');
+
+Route::get('/data/berita', [PostController::class, 'berita'])->middleware('auth');
+Route::get('/data/tambahberita', [PostController::class, 'tambahBerita'])->middleware('auth');
+Route::post('/data/createberita', [PostController::class, 'createBerita'])->middleware('auth');
+Route::get('/data/berita/{post:id}/edit', [PostController::class, 'editBerita'])->middleware('auth');
+Route::post('/data/berita/{post:id}/update', [PostController::class, 'updateBerita'])->middleware('auth');
+Route::post('/data/berita/{post:id}/hapus', [PostController::class, 'hapusBerita'])->middleware('auth');

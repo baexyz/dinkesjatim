@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Post;
 use App\Models\Ppid;
 use App\Models\Institusi;
 use App\Models\ProfilPejabat;
@@ -21,8 +22,10 @@ class Bidang extends Model
     public function profilPejabat(){
         return $this->hasMany(ProfilPejabat::class);
     }
-
     public function ppid(){
         return $this->hasMany(Ppid::class);
+    }
+    public function post(){
+        return $this->hasMany(Post::class);
     }
 }

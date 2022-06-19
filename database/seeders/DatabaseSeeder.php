@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Bidang;
 
 use App\Models\Profil;
+use App\Models\Kabkota;
 use App\Models\Pejabat;
 use App\Models\Institusi;
 use Illuminate\Database\Seeder;
@@ -42,6 +43,11 @@ class DatabaseSeeder extends Seeder
         ]);
         Pejabat::create([
             'posisi_jabatan' => 'Bidang Pelayanan Kesehatan',
+        ]);
+
+        Kabkota::create([
+            'kd_kabkota' => '35.10',
+            'nama_kabkota' => 'Banyuwangi'
         ]);
 
         User::create([
