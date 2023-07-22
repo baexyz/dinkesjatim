@@ -7,7 +7,6 @@
         <div class="container py-55">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
                 <h5 class="fw-bold text-primary text-uppercase">Berita Terkini</h5>
-                {{-- <h1 class="mb-0">Read The Latest Articles from Our Blog Post</h1> --}}
             </div>
             <div class="row g-5">
                 <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
@@ -267,32 +266,29 @@
                         <h5 class="fw-bold text-primary text-uppercase">Public Corner</h5>
                         {{-- <h1 class="mb-0">Need A Free Quote? Please Feel Free to Contact Us</h1> --}}
                     </div>
-
-                    {{-- {{  dd($publiccorner)}} --}}
-                    <div style="cursor: pointer;">
-                        @foreach ($publiccorner as $item)
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-title"><b>{{ $item->nama }} </b>| Updated {{ \Carbon\Carbon::parse($item->updated_at)->diffForHumans() }}</div>
-                                    {{-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> --}}
-                                    <p class="card-text">Pertanyaan : {{ $item->pertanyaan}}</p>
-                                    <p class="card-text">Jawaban : {{ $item->jawaban}}</p>
-                                    <a href="/public-corner/{{$item->id}}/view" class="card-link">Baca Selengkapnya..</a>
-                                    {{-- <a href="#" class="card-link">Another link</a> --}}
+                    <div class="row gx-3">
+                        <div class="boxpd1" onclick="location.href='#';" style="cursor: pointer;">
+                            @foreach ($publiccorner as $item)
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="card-title"><b>{{ $item->nama }} </b>| Updated
+                                            {{ \Carbon\Carbon::parse($item->updated_at)->diffForHumans() }}</div>
+                                        <p class="card-text">Pertanyaan : {{ $item->pertanyaan }}</p>
+                                        <p class="card-text">Jawaban : {{ $item->jawaban }}</p>
+                                        <a href="/public-corner/{{ $item->id }}/view" class="card-link">Baca
+                                            Selengkapnya..</a>
+                                    </div>
                                 </div>
-                            </div>
-                            {{-- <span class="judulp1">{{ $item->pertanyaan }}</span> --}}
-                            {{-- <span>{{ Str::limit($item->jawaban, 13) }} ...</span> --}}
-                            {{-- <span>{{ $item->nama }}</span> --}}
-                            {{-- <span class="tanggalp1">{{ $item->updated_at }}</span> --}}
-                            {{-- <a style="color:#000000" href="" class="bacas1">Baca Selengkapnya</a> --}}
-
+                            @endforeach
                         </div>
-                    @endforeach
+
+                    </div>
+
 
                     <br>
-                    <a href="/public-corner"><input class="btn btn-primary" type="submit" value="Kirim Pertanyaan"></a>
-                    <a href="/public-corner/semua"><input class="btn btn-primary" type="reset" value="Lihat Selengkapnya"></a>
+                    <a href="kirimPertanyaanPC"><input class="btn btn-primary" type="submit"
+                            value="Kirim Pertanyaan"></a>
+                    <a href="publicCorner"><input class="btn btn-primary" type="reset" value="Lihat Selengkapnya"></a>
                 </div>
                 <div class="col-lg-5">
                     <div class="section-title text-left position-relative pb-3 mb-5 mx-auto" ;>
@@ -307,13 +303,8 @@
     </div>
     <!-- Quote End -->
 
-    <!-- Team Start -->
-
     <div class="container py-55">
         <iframe class="video" src="https://www.youtube.com/embed/yLvsSSliFec">
         </iframe>
-
     </div>
-
-    <!-- Team End -->
 @endsection

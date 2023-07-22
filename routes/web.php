@@ -107,10 +107,18 @@ Route::get('/dashboard', function(){
 
 Route::get('/institusi', [InstitusiController::class, 'institusi'])->middleware('auth');
 
+//  Front End
+
 Route::get('/visimisi', [InstitusiController::class, 'visimisi']);
+Route::get('/motto', [InstitusiController::class, 'motto']);
+Route::get('/tujuan', [InstitusiController::class, 'tujuan']);
+Route::get('/kebijakan', [InstitusiController::class, 'kebijakan']);
+Route::get('/struktur-organisasi', [InstitusiController::class, 'strukturorganisasi']);
+
 Route::get('/institusi/editvisimisi', [InstitusiController::class, 'editVisimisi'])->middleware('auth');
 Route::post('/institusi/updatevisimisi', [InstitusiController::class, 'updateVisimisi'])->middleware('auth');
-Route::post('/institusi/visimisi/halamanVisimisi', [InstitusiController::class, 'halamanVisimisi']);
+// Route::post('/institusi/visimisi/halamanVisimisi', [InstitusiController::class, 'halamanVisimisi'])->middleware('auth');
+Route::post('/institusi/visimisi/createvisimisi', [InstitusiController::class, 'createVisimisi'])->middleware('auth');
 
 Route::get('/institusi/edittujuan', [InstitusiController::class, 'editTujuan'])->middleware('auth');
 Route::post('/institusi/updatetujuan', [InstitusiController::class, 'updateTujuan'])->middleware('auth');
