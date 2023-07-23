@@ -97,7 +97,7 @@ class InstitusiController extends Controller
         ]);
 
         if ($request->file('image')) {
-            $validatedData['image'] = $request->file('image')->store('post-images');
+            $validatedData['image'] = basename($request->file('image')->store('public/post-images'));
         }
 
         $validatedData['user_id'] = auth()->user()->id;
@@ -120,7 +120,7 @@ class InstitusiController extends Controller
 
         // dd($validatedData);
         if ($request->file('image')) {
-            $validatedData['image'] = $request->file('image')->store('post-images');
+            $validatedData['image'] = basename($request->file('image')->store('public/post-images'));
         }
 
         $validatedData['user_id'] = auth()->user()->id;
@@ -159,7 +159,7 @@ class InstitusiController extends Controller
             if ($request->oldImage) {
                 Storage::delete($request->oldImage);
             }
-            $validatedData['image'] = $request->file('image')->store('post-images');
+            $validatedData['image'] = basename($request->file('image')->store('public/post-images'));
         }
 
         $validatedData['user_id'] = auth()->user()->id;
@@ -180,7 +180,7 @@ class InstitusiController extends Controller
         ]);
 
         if ($request->file('image')) {
-            $validatedData['image'] = $request->file('image')->store('post-images');
+            $validatedData['image'] = basename($request->file('image')->store('public/post-images'));
         }
 
         $validatedData['user_id'] = auth()->user()->id;
@@ -218,7 +218,7 @@ class InstitusiController extends Controller
             if ($request->oldImage) {
                 Storage::delete($request->oldImage);
             }
-            $validatedData['image'] = $request->file('image')->store('post-images');
+            $validatedData['image'] = basename($request->file('image')->store('public/post-images'));
         }
 
         $validatedData['user_id'] = auth()->user()->id;
@@ -240,7 +240,7 @@ class InstitusiController extends Controller
         ]);
 
         if ($request->file('image')) {
-            $validatedData['image'] = $request->file('image')->store('post-images');
+            $validatedData['image'] = basename($request->file('image')->store('public/post-images'));
         }
 
         $validatedData['user_id'] = auth()->user()->id;
@@ -279,7 +279,7 @@ class InstitusiController extends Controller
             if ($request->oldImage) {
                 Storage::delete($request->oldImage);
             }
-            $validatedData['image'] = $request->file('image')->store('post-images');
+            $validatedData['image'] = basename($request->file('image')->store('public/post-images'));
         }
 
         $validatedData['user_id'] = auth()->user()->id;
@@ -303,7 +303,7 @@ class InstitusiController extends Controller
         ]);
 
         if ($request->file('image')) {
-            $validatedData['image'] = $request->file('image')->store('post-images');
+            $validatedData['image'] = basename($request->file('image')->store('public/post-images'));
         }
 
         $validatedData['user_id'] = auth()->user()->id;
@@ -344,7 +344,7 @@ class InstitusiController extends Controller
             if ($request->oldImage) {
                 Storage::delete($request->oldImage);
             }
-            $validatedData['image'] = $request->file('image')->store('post-images');
+            $validatedData['image'] = basename($request->file('image')->store('public/post-images'));
         }
 
         $validatedData['user_id'] = auth()->user()->id;
@@ -367,7 +367,7 @@ class InstitusiController extends Controller
         ]);
 
         if ($request->file('image')) {
-            $validatedData['image'] = $request->file('image')->store('post-images');
+            $validatedData['image'] = basename($request->file('image')->store('public/post-images'));
         }
 
         $validatedData['user_id'] = auth()->user()->id;
@@ -408,7 +408,7 @@ class InstitusiController extends Controller
             if ($request->oldImage) {
                 Storage::delete($request->oldImage);
             }
-            $validatedData['image'] = $request->file('image')->store('post-images');
+            $validatedData['image'] = basename($request->file('image')->store('public/post-images'));
         }
 
         $validatedData['user_id'] = auth()->user()->id;
@@ -429,7 +429,7 @@ class InstitusiController extends Controller
         ]);
 
         if ($request->file('image')) {
-            $validatedData['image'] = $request->file('image')->store('post-images');
+            $validatedData['image'] = basename($request->file('image')->store('public/post-images'));
         }
 
         $validatedData['user_id'] = auth()->user()->id;
@@ -467,7 +467,7 @@ class InstitusiController extends Controller
             if ($request->oldImage) {
                 Storage::delete($request->oldImage);
             }
-            $validatedData['image'] = $request->file('image')->store('post-images');
+            $validatedData['image'] = basename($request->file('image')->store('public/post-images'));
         }
 
         $validatedData['user_id'] = auth()->user()->id;

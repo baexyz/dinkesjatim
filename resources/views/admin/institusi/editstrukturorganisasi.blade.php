@@ -78,7 +78,7 @@
                                                     Berita</label>
                                                 <input type="hidden" name="oldImage" value="{{ $item->image }}">
                                                 @if ($item->image)
-                                                    <img src="{{ asset('storage/' . $item->image) }}"
+                                                    <img src="{{ asset('storage/post-images/' . $item->image) }}"
                                                         class="img-preview img-fluid mb-3 col-sm-5 d-block">
                                                 @else
                                                     <img class="img-preview img-fluid mb-3 col-sm-5">

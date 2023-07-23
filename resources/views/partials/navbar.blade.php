@@ -65,7 +65,15 @@
                         </div>
                     </div>
                     <a href="pelayanan" class="nav-item nav-link">Pelayanan</a>
-                    <a href="#" class="nav-item nav-link">PPID</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">PPID</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="/visimisi" class="dropdown-item">Informasi Publik</a>
+                            <a href="/motto" class="dropdown-item">Sejarah</a>
+                            <a href="/kebijakan" class="dropdown-item">Struktur Tupoksi</a>
+                            <a href="/struktur-organisasi" class="dropdown-item">Tata Cara Permohonan</a>
+                        </div>
+                    </div>
                     <a href="#" class="nav-item nav-link">Sitemap</a>
                     <a href="#" class="nav-item nav-link">FAQ</a>
                     <a href="#" class="nav-item nav-link">Kontak</a>

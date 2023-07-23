@@ -26,6 +26,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 // Route::get('/beranda', function () {
 //     return view('beranda');
 // });
@@ -91,9 +92,6 @@ Route::get('/beranda', [BerandaController::class, 'publiccorner']);
 Route::get('/public-corner/semua', [PublicCornerController::class, 'semua']);
 Route::post('/public-corner/kirimpertanyaan', [PublicCornerController::class, 'kirimpertanyaan']);
 Route::get('/public-corner/{public_corner:id}/view', [PublicCornerController::class, 'tampil']);
-
-
-
 
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
@@ -270,3 +268,5 @@ Route::post('/data/createberita', [PostController::class, 'createBerita'])->midd
 Route::get('/data/berita/{post:id}/edit', [PostController::class, 'editBerita'])->middleware('auth');
 Route::post('/data/berita/{post:id}/update', [PostController::class, 'updateBerita'])->middleware('auth');
 Route::post('/data/berita/{post:id}/hapus', [PostController::class, 'hapusBerita'])->middleware('auth');
+
+
